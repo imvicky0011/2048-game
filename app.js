@@ -184,7 +184,16 @@ document.addEventListener('DOMContentLoaded', () => {
         checkWin();
     }
 
+    //Mobile control keys
+    let btn1 = document.querySelector('.btn-1');
+    let btn2 = document.querySelector('.btn-2');
+    let btn3 = document.querySelector('.btn-3');
+    let btn4 = document.querySelector('.btn-4');
 
+    btn1.addEventListener('click', keyUp);
+    btn2.addEventListener('click', keyLeft);
+    btn3.addEventListener('click', keyRight);
+    btn4.addEventListener('click', keyDown);
 
 
     function control(e) {
