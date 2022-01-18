@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard();
 
 
-
     function printBoard() {
         for(let i = 0; i < squares.length; i++) {
             if(i % 4 === 0){
@@ -334,6 +333,12 @@ document.addEventListener('DOMContentLoaded', () => {
             resultDisplay.innerHTML = 'GAME OVER!';
             document.removeEventListener('keyup', control);
             document.querySelector('.grid').style.opacity = "0.3";
+            let btn = document.createElement('button');
+            btn.innerHTML = "Retry??";
+            btn.onclick = function() {
+                window.location.reload();
+            }
+            resultDisplay.appendChild(btn);
         }
     }    
 })
